@@ -118,157 +118,111 @@ body {
 /* ──  INDEX PAGE                ── */
 /* ── ═══════════════════════════ ── */
 
-/* SPLIT HERO */
+/* ── SPLIT HERO (UPRAVENÉ PRE REÁLNE FOTKY) ── */
 .split-hero {
   display: flex;
   height: 100vh;
   padding-top: 64px;
+  overflow: hidden;
+  position: relative;
+  background: var(--black); /* Fix pre prípad, že sa fotka dlhšie načítava */
 }
 
 .split-panel {
-  flex: 1;
+  flex: 1; /* Čiara presne v strede */
   position: relative;
   overflow: hidden;
-  cursor: pointer;
   text-decoration: none;
   display: block;
-  transition: flex var(--transition);
+  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.split-panel:hover { flex: 1.2; }
+/* Deliaca čiara medzi domami */
+.split-panel:first-child {
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.split-panel:hover { 
+  flex: 1.15; /* Jemné rozšírenie pri hoveri */
+}
 
 .split-panel-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
-  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              filter 0.5s ease;
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 0;
+}
+
+/* TVOJE FOTKY - POZOR NA CESTU K SÚBORU */
+.panel-1-bg {
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('img/hero-1.jpg');
+  background-position: center right; 
+}
+.panel-2-bg {
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('img/hero-2.jpg');
+  background-position: center left; 
 }
 
 .split-panel:hover .split-panel-bg {
-  transform: scale(1.05);
-  filter: brightness(0.65);
-}
-
-/* Overlay gradients */
-.split-panel::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(20,18,14,0.05) 0%,
-    rgba(20,18,14,0.55) 70%,
-    rgba(20,18,14,0.75) 100%
-  );
-  z-index: 1;
-  transition: background 0.4s;
-}
-.split-panel:hover::after {
-  background: linear-gradient(
-    to bottom,
-    rgba(20,18,14,0.15) 0%,
-    rgba(20,18,14,0.65) 60%,
-    rgba(20,18,14,0.85) 100%
-  );
-}
-
-.panel-1-bg {
-  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80&auto=format&fit=crop');
-}
-.panel-2-bg {
-  background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1400&q=80&auto=format&fit=crop');
+  transform: scale(1.05); 
 }
 
 .split-panel-content {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   z-index: 2;
-  padding: 48px 44px;
+  padding: 60px 44px;
   color: var(--white);
+  text-align: center;
 }
 
 .panel-eyebrow {
   font-family: var(--font-sans);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold-light);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .panel-title {
   font-family: var(--font-serif);
-  font-size: clamp(30px, 3.5vw, 48px);
+  font-size: clamp(28px, 3vw, 42px);
   font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.1;
-  margin-bottom: 8px;
-  color: var(--white);
-}
-
-.panel-plot {
-  font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 300;
-  letter-spacing: 0.04em;
-  color: rgba(255,255,255,0.65);
-  margin-bottom: 6px;
+  margin-bottom: 16px;
 }
 
 .panel-price {
   font-family: var(--font-serif);
-  font-size: clamp(26px, 3vw, 38px);
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 400;
   color: var(--white);
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .btn-panel {
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 11px 24px;
-  border: 1px solid rgba(255,255,255,0.5);
+  padding: 12px 28px;
+  border: 1px solid rgba(255,255,255,0.6);
   font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--white);
+  transition: all 0.3s;
   background: transparent;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease 0.05s,
-              transform 0.3s ease 0.05s,
-              background 0.2s,
-              border-color 0.2s;
-}
-.split-panel:hover .btn-panel {
-  opacity: 1;
-  transform: translateY(0);
-}
-.btn-panel:hover {
-  background: rgba(255,255,255,0.15);
-  border-color: rgba(255,255,255,0.8);
 }
 
-/* Panel divider */
-.split-divider {
-  position: fixed;
-  top: 64px; bottom: 0;
-  left: 50%;
-  width: 1px;
-  background: rgba(255,255,255,0.15);
-  z-index: 10;
-  pointer-events: none;
-  transition: opacity 0.3s;
+.split-panel:hover .btn-panel {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
 }
-.split-hero:hover .split-divider { opacity: 0; }
 
 /* ── STATS BAR ── */
 .stats-bar {
