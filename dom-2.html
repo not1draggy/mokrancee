@@ -176,8 +176,8 @@
       Príklad: img/dom2/1.jpg, img/dom2/2.jpg ...
     -->
     <div class="gallery-grid">
-      <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/dom-2-predna.png');"></div>
-      <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/terasa-p.png');"></div>
+      <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/dom2/2.png');"></div>
+     <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/dom2/1.png');"></div>
       <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/lava-st-terasa-ai.png');"></div>
       <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/prijazdova-cesta-ai.png');"></div>
       <!-- Ďalšie fotky: nahraď nižšie za img/dom2/5.jpg a img/dom2/6.jpg -->
@@ -193,8 +193,7 @@
     <span class="sub-section-label">Pôdorys a dispozícia</span>
     <div class="sub-section-rule"></div>
     <h2 class="sub-section-title">Technický pôdorys</h2>
-    
-      >
+              >
     </div>
     <p class="podorys-zoom-hint">Pôdorys · Mokrance · 1NP + 2NP</p>
 
@@ -298,7 +297,7 @@ function loadTour(containerId, placeholderId, tourUrl) {
   const placeholder = document.getElementById(placeholderId);
   placeholder.style.display = 'none';
   const iframe = document.createElement('iframe');
-  iframe.src = tourUrl !== 'DOM2_TOUR_URL' ? tourUrl : 'https://www.homestyler.com/tour/';
+  iframe.src = tourUrl !== 'DOM2_TOUR_URL' ? tourUrl : 'https://www.panorama.homestyler.com';
   iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
   iframe.allowFullscreen = true;
   iframe.setAttribute('allow', 'xr-spatial-tracking; gyroscope; accelerometer');
