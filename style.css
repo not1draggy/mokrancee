@@ -1,8 +1,3 @@
-/* ============================================================
-   MOKRANCE — Final Stylesheet
-   Font: Arimo (Google Fonts) · White/Black/Gold
-   ============================================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,9 +28,6 @@ body {
   line-height: 1.6;
 }
 
-/* ══════════════════════════════════════
-   NAV
-══════════════════════════════════════ */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -108,9 +100,6 @@ body {
 .nav-back:hover { opacity: 0.7; }
 .nav-back svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 2; fill: none; }
 
-/* ══════════════════════════════════════
-   INDEX — SPLIT HERO
-══════════════════════════════════════ */
 .split-hero {
   display: flex;
   height: 100vh;
@@ -208,7 +197,6 @@ body {
   border-color: var(--white);
 }
 
-/* ══ STATS BAR ══ */
 .stats-bar {
   background: var(--stats-bg);
   padding: 32px 48px;
@@ -254,7 +242,6 @@ body {
   color: rgba(255,255,255,0.4);
 }
 
-/* ══ UNITS SECTION ══ */
 .units-section {
   background: var(--off-white);
   padding: 100px 64px;
@@ -389,7 +376,6 @@ body {
 }
 .unit-card:hover .btn-unit { border-color: var(--black); color: var(--black); }
 
-/* ══ CONTACT (index) ══ */
 .contact-tel-block {
   display: block;
   padding: 36px 52px;
@@ -421,7 +407,6 @@ body {
   color: var(--black);
 }
 
-/* ══ CONTACT SECTION (index) ══ */
 .contact-section {
   background: var(--white);
   border-top: 1px solid var(--gray-light);
@@ -473,7 +458,6 @@ body {
   width: 100%;
 }
 
-/* ══ FOOTER ══ */
 .site-footer {
   background: var(--black);
   padding: 28px 64px;
@@ -518,9 +502,6 @@ body {
 }
 .footer-email:hover { opacity: 0.75; }
 
-/* ══════════════════════════════════════
-   SUBPAGE — HERO
-══════════════════════════════════════ */
 .sub-hero {
   padding: 136px 64px 88px;
   background: var(--white);
@@ -578,9 +559,6 @@ body {
   color: var(--black);
 }
 
-/* ══════════════════════════════════════
-   SUBPAGE — CONTENT
-══════════════════════════════════════ */
 .sub-content {
   max-width: 1000px;
   margin: 0 auto;
@@ -627,7 +605,6 @@ body {
   margin-right: auto;
 }
 
-/* ══ TECH GRID ══ */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -661,7 +638,6 @@ body {
   line-height: 1.2;
 }
 
-/* ══ FLOOR PLAN ══ */
 .floor-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -717,7 +693,6 @@ body {
   font-size: 13px;
 }
 
-/* ══ BENTO GALLERY ══ */
 .bento-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -739,7 +714,6 @@ body {
 .bento-small2 { grid-row: 2; grid-column: 2; }
 .bento-wide   { grid-row: 2; grid-column: 1; }
 
-/* ══ GALLERY GRID (6 photos) ══ */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -756,7 +730,6 @@ body {
 }
 .gallery-cell:hover { filter: brightness(1.07); transform: scale(1.01); }
 
-/* ══ PÔDORYS ══ */
 .podorys-container {
   display: none;
 }
@@ -776,7 +749,6 @@ body {
   margin-top: 12px;
 }
 
-/* PDF download button */
 .btn-pdf {
   display: inline-flex;
   align-items: center;
@@ -798,7 +770,6 @@ body {
 .btn-pdf:hover { background: var(--dark); transform: translateY(-1px); }
 .btn-pdf svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 2; fill: none; }
 
-/* ══ 3D TOUR ══ */
 .tour-container {
   position: relative;
   aspect-ratio: 16/9;
@@ -857,7 +828,6 @@ body {
 }
 .btn-load-tour:hover { background: var(--black); color: var(--white); }
 
-/* ══ CONTACT CARDS ══ */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -926,7 +896,6 @@ body {
 }
 .not-rk-note strong { color: var(--gray-text); font-weight: 700; }
 
-/* ══ INLINE FORM ══ */
 .inline-form {
   border: 1px solid var(--gray-light);
   padding: 48px 48px 44px;
@@ -1021,20 +990,16 @@ body {
 .btn-form-submit:hover { background: var(--black); color: var(--white); }
 .btn-form-submit:hover svg { transform: translateX(3px); }
 
-/* ══ SEPARATOR ══ */
 .sep {
   border: none;
   border-top: 1px solid var(--gray-light);
   margin: 72px 0;
 }
 
-/* ══════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════ */
-@media (max-width: 1024px) {
+@ (max-width: 1024px) {
   .sub-content { padding: 72px 44px 100px; }
 }
-@media (max-width: 900px) {
+@ (max-width: 900px) {
   .nav { padding: 0 24px; height: 62px; }
   .units-section { padding: 72px 28px; }
   .units-grid { grid-template-columns: 1fr; }
@@ -1063,7 +1028,7 @@ body {
   .podorys-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .podorys-container img { min-width: 580px; }
 }
-@media (max-width: 680px) {
+@ (max-width: 680px) {
   .split-hero { flex-direction: column; height: auto; }
   .split-panel { height: 50vh; flex: 1 !important; }
   .split-panel-content { padding: 28px 20px; }
