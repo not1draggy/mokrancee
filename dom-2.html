@@ -295,7 +295,7 @@ function loadTour(containerId, placeholderId, tourUrl) {
   const placeholder = document.getElementById(placeholderId);
   placeholder.style.display = 'none';
   const iframe = document.createElement('iframe');
-  iframe.src = tourUrl !== 'DOM2_TOUR_URL' ? tourUrl : 'https://www.panorama.homestyler.com/v2/index.html?';
+  iframe.src = tourUrl !== 'DOM2_TOUR_URL' ? tourUrl : 'https://panorama.homestyler.com/v2/index.html?sid=cEsT12Si6jVUPWmGzxxgZd&locale=en_US';
   iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
   iframe.allowFullscreen = true;
   iframe.setAttribute('allow', 'xr-spatial-tracking; gyroscope; accelerometer');
