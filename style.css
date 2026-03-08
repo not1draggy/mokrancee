@@ -695,7 +695,7 @@ body {
 /* ══ PÔDORYS ══ */
 .podorys-container {
   width: 100%;
-  max-width: 880px;
+  max-width: 600px;
   margin: 0 auto;
   border: 1px solid var(--gray-light);
   overflow: hidden;
