@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <a class="nav-back" href="index.html">
     <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
@@ -24,7 +23,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="sub-hero">
   <span class="sub-eyebrow">Mokrance · Slepá ulica · Novostavba</span>
   <h1 class="sub-title-xl">DOM<br>Č.&thinsp;1</h1>
@@ -44,10 +42,8 @@
   </div>
 </div>
 
-<!-- CONTENT -->
-<div class="sub-content">
+  <div class="sub-content">
 
-  <!-- PARAMETRE -->
   <section class="sub-section" id="parametre">
     <span class="sub-section-label">Technické parametre</span>
     <div class="sub-section-rule"></div>
@@ -130,7 +126,6 @@
 
   <hr class="sep">
 
-  <!-- DISPOZÍCIA -->
   <section class="sub-section" id="dispozicia">
     <span class="sub-section-label">Dispozícia</span>
     <div class="sub-section-rule"></div>
@@ -165,22 +160,17 @@
 
   <hr class="sep">
 
-  <!-- GALÉRIA -->
   <section class="sub-section" id="galeria">
     <span class="sub-section-label">Fotodokumentácia</span>
     <div class="sub-section-rule"></div>
     <h2 class="sub-section-title">Galéria</h2>
 
-    <!--
-      FOTKY: Súbory 1.jpg až 6.jpg ulož do priečinka /img/dom1/ v repozitári.
-      Príklad: img/dom1/1.jpg, img/dom1/2.jpg ...
-    -->
+
     <div class="gallery-grid">
       <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/dom-1-predna.png');"></div>
       <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/terasa-l.png');"></div>
       <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/lava-st-terasa-ai.png');"></div>
       <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/prijazdova-cesta-ai.png');"></div>
-      <!-- Ďalšie fotky: nahraď nižšie za img/dom1/5.jpg a img/dom1/6.jpg -->
       <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/dom-1-predna.png');"></div>
       <div class="gallery-cell" style="background-image:url('https://cdn.jsdelivr.net/gh/not1draggy/mokrancee@main/terasa-l.png');"></div>
     </div>
@@ -188,14 +178,12 @@
 
   <hr class="sep">
 
-  <!-- PÔDORYS -->
   <section class="sub-section" id="podorys">
     <span class="sub-section-label">Pôdorys a dispozícia</span>
     <div class="sub-section-rule"></div>
     <h2 class="sub-section-title">Technický pôdorys</h2>
     <p class="sub-section-body">Presné rozmery a usporiadanie miestností. Na mobile posúvajte prstom pre zobrazenie celého výkresu.</p>
 
-    <!-- PDF DOWNLOAD -->
     <div style="text-align:center;">
       <a
         class="btn-pdf"
@@ -211,7 +199,6 @@
 
   <hr class="sep">
 
-  <!-- 3D TOUR -->
   <section class="sub-section" id="tour">
     <span class="sub-section-label">Virtuálna prehliadka</span>
     <div class="sub-section-rule"></div>
@@ -233,7 +220,6 @@
 
   <hr class="sep">
 
-  <!-- KONTAKT -->
   <section class="sub-section" id="kontakt">
     <span class="sub-section-label">Priamy kontakt</span>
     <div class="sub-section-rule"></div>
@@ -283,7 +269,6 @@
 
 </div>
 
-<!-- FOOTER -->
 <footer class="site-footer">
   <span class="footer-logo">484.sk · Mokrance</span>
   <span class="footer-note">Dom č. 1 · Ľavý · 486,58 m² · 287 000 €</span>
@@ -296,7 +281,7 @@ function loadTour(containerId, placeholderId, tourUrl) {
   placeholder.style.display = 'none';
   const iframe = document.createElement('iframe');
   iframe.src = tourUrl !== 'DOM1_TOUR_URL' ? tourUrl : 'https://panorama.homestyler.com/v2/index.html?sid=cEsT12Si6jVUPWmGzxxgZd&locale=en_US';
-  iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
+  iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:500px;border:none;';
   iframe.allowFullscreen = true;
   iframe.setAttribute('allow', 'xr-spatial-tracking; gyroscope; accelerometer');
   container.appendChild(iframe);
